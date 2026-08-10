@@ -1,16 +1,9 @@
-# Last updated: 07/08/2026, 15:40:45
-class Solution(object):
-    def twoSum(self, nums, target):
-        for i in range(len(nums)):
-            for j in range(i+1,len(nums)):
-                if nums[i]+nums[j]==target:
-                    return [i,j]
-        
-
-        obj = Solution()
-        n = int(input("Enter the length of array : "))
-        nums = list(map(int, input("Enter numbers: ").split()))
-
-        target = int(input("Enter target sum:"))
-        print(obj.twoSum)
-        
+# Last updated: 10/08/2026, 12:12:32
+1class Solution(object):
+2    def twoSum(self, nums, target):
+3        for i in range(len(nums)):
+4            for j in range(i+1,len(nums)):
+5                if nums[i]+nums[j]==target:
+6                    return (i,j)
+7                
+8        

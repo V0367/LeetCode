@@ -1,4 +1,4 @@
-# Last updated: 14/08/2026, 15:06:58
+# Last updated: 14/08/2026, 15:10:34
 1class Solution(object):
 2    def maxSubArray(self, nums):
 3        current_sum = nums[0]

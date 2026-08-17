@@ -1,15 +1,13 @@
-# Last updated: 17/08/2026, 16:54:53
+# Last updated: 17/08/2026, 16:57:31
 1class Solution(object):
 2    def singleNumber(self, nums):
 3        """
 4        :type nums: List[int]
 5        :rtype: int
 6        """
-7        n = len(nums)
+7        result = 0
 8
-9        if n==1:
-10            return nums[0]
+9        for num in nums:
+10            result ^= num
 11
-12        result = reduce(xor,nums)
-13
-14        return result
+12        return result

@@ -1,19 +1,19 @@
-# Last updated: 20/08/2026, 11:45:34
+# Last updated: 20/08/2026, 12:11:16
 1class Solution(object):
-2    def moveZeroes(self, nums):
+2    def removeDuplicates(self, nums):
 3        """
 4        :type nums: List[int]
-5        :rtype: None Do not return anything, modify nums in-place instead.
+5        :rtype: int
 6        """
-7        position = 0
-8        n = len(nums)
-9        for x in nums:
-10            if x!=0:
-11                nums[position] = x
-12                position+=1
-13            
-14        for i in range(position,n):
-15            nums[i] = 0
+7        if not nums:
+8            return 0
+9
+10        position = 1
+11        for i in range(1,len(nums)):
+12            if nums[i]!=nums[position-1]:
+13                nums[position] = nums[i]
+14                position+=1
+15        return position 
 16
-17        return nums
+17        
 18        

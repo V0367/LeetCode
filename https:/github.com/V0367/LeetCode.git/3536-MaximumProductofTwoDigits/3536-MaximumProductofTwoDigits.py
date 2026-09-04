@@ -1,20 +1,22 @@
-# Last updated: 04/09/2026, 16:53:44
+# Last updated: 04/09/2026, 17:01:55
 1class Solution(object):
 2    def maxProduct(self, n):
 3        
-4        nums = []
-5
-6        while n>0:
-7            digit = n%10
-8
-9            nums.append(digit)
-10
-11            n//=10
-12        
-13        num1 = nums.pop(nums.index(max(nums)))
-14        num2 = nums.pop(nums.index(max(nums)))
-15
-16        return num1 * num2
+4        largest = 0
+5        second = 0
+6
+7
+8        while n>0:
+9            digit = n%10
+10            n//=10
+11
+12            if digit >= largest:
+13                second = largest
+14                largest = digit
+15            elif digit > second:
+16                second = digit
 17
-18
-19        
+18        return largest * second
+19
+20
+21        

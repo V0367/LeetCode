@@ -1,14 +1,12 @@
-# Last updated: 04/09/2026, 17:12:37
+# Last updated: 04/09/2026, 17:13:43
 1class Solution(object):
 2    def findMissingElements(self, nums):
 3        
 4        missing = []
-5        nums = sorted(nums)
-6        num_set = set(nums)
-7        n = len(nums)
-8
-9        for i in range(nums[0],nums[n-1]):
-10            if i not in num_set:
-11                missing.append(i)
-12        return missing 
-13        
+5        num_set = set(nums)
+6
+7        for i in range(min(nums),max(nums)):
+8            if i not in num_set:
+9                missing.append(i)
+10        return missing 
+11        
